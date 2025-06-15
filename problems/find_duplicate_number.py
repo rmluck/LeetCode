@@ -19,21 +19,29 @@ Constraints:
 
 
 def find_the_duplicate_number(nums: list[int]) -> int:
+    # Initialize the slow and fast pointers
     slow = nums[0]
     fast = nums[0]
 
+    # First phase: Finding the intersection point in the cycle
     while True:
+        # Slow pointer moves one step, fast pointer moves two steps
         slow = nums[slow]
         fast = nums[nums[fast]]
 
+        # If they meet, there is a cycle
         if slow == fast:
             break
     
+    # Second phase: Finding the entrance to the cycle
+    # Reinitialize one pointer to the start
     fast = nums[0]
+    # Move both pointers one step at a time until they meet
     while slow != fast:
         slow = nums[slow]
         fast = nums[fast]
         
+    # The meeting point is the duplicate number
     return slow
 
 # Example 1
