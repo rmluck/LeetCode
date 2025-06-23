@@ -15,6 +15,7 @@ Constraints:
 
 
 def duplicate_zeros(arr: list[int]) -> None:
+    # Get the length of the array and count the number of zeros
     n = len(arr)
     zeros = 0
 

@@ -19,30 +19,40 @@ Constraints:
 
 
 def four_sum(nums: list[int], target: int) -> list[list[int]]:
+    # Initialize the result list and sort the array
     quadruplets = []
     nums.sort()
 
+    # Iterate through the array with two nested loops and two pointers
     for i in range(len(nums) - 3):
+        # Skip duplicate values for the first number
         if i > 0 and nums[i] == nums[i - 1]:
             continue
 
+        # Second loop for the second number
         for j in range(i + 1, len(nums) - 2):
+            # Skip duplicate values for the second number
             if j > i + 1 and nums[j] == nums[j - 1]:
                 continue
 
+            # Two pointers for the third and fourth numbers
             left = j + 1
             right = len(nums) - 1
 
             while left < right:
+                # Calculate the sum of the four numbers
                 four_sum = nums[i] + nums[j] + nums[left] + nums[right]
 
+                # Move the pointers based on the comparison with the target
                 if four_sum < target:
                     left += 1
                 elif four_sum > target:
                     right -= 1
                 else:
+                    # Found a quadruplet
                     quadruplets.append([nums[i], nums[j], nums[left], nums[right]])
 
+                    # Skip duplicate values for the third and fourth numbers
                     while left < right and nums[left] == nums[left + 1]:
                         left += 1
                     while left < right and nums[right] == nums[right - 1]:
@@ -50,6 +60,7 @@ def four_sum(nums: list[int], target: int) -> list[list[int]]:
                     left += 1
                     right -= 1
     
+    # Return the list of unique quadruplets
     return quadruplets
 
 # Example 1

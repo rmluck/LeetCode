@@ -14,22 +14,29 @@ Constraints:
 
 
 def subarray_product_less_than_k(nums: list[int], k: int) -> int:
+    # Edge case: if k is less than or equal to 1, no products can be less than k
     if k <= 1:
         return 0
 
+    # Initialize the product, count of subarrays, and left pointer
     product = 1
     count = 0
     left = 0
 
+    # Use a sliding window approach to find valid subarrays
     for right in range(len(nums)):
+        # Expand the window by including the right element
         product *= nums[right]
 
+        # Shrink the window from the left if the product is not less than k
         while product >= k:
             product //= nums[left]
             left += 1
 
+        # All subarrays ending at 'right' with start index from 'left' to 'right' are valid
         count += right - left + 1
 
+    # Return the total count of valid subarrays
     return count
 
 # Example 1

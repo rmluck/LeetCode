@@ -15,23 +15,33 @@ Constraints:
 
 
 def backspace_string_compare(s: str, t: str) -> bool:
+    # Use stacks to simulate the typing process for both strings
     s_stack = []
     t_stack = []
 
+    # Process string s
     for char in s:
+        # Handle backspace character
         if char == '#':
+            # Only pop if the stack is not empty
             if s_stack:
                 s_stack.pop()
         else:
+            # Push the character onto the stack
             s_stack.append(char)
 
+    # Process string t
     for char in t:
+        # Handle backspace character
         if char == '#':
+            # Only pop if the stack is not empty
             if t_stack:
                 t_stack.pop()
         else:
+            # Push the character onto the stack
             t_stack.append(char)
 
+    # Compare the final stacks
     return s_stack == t_stack
 
 # Example 1

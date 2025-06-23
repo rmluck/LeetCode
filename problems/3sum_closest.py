@@ -18,26 +18,33 @@ Constraints:
 
 
 def three_sum_closest(nums: list[int], target: int) -> int:
+    # Initialize the closest sum to None, sort the array
     closest = None
     nums.sort()
 
+    # Iterate through the array, using two pointers to find the closest sum
     for i in range(len(nums) - 2):
+        # Skip duplicate values for the first number
         left = i + 1
         right = len(nums) - 1
 
         while left < right:
+            # Calculate the sum of the three numbers
             three_sum = nums[i] + nums[left] + nums[right]
 
+            # Update the closest sum if it's closer to the target
             if closest is None or abs(three_sum - target) < abs(closest - target):
                 closest = three_sum
 
+            # Move the pointers based on the comparison with the target
             if three_sum < target:
                 left += 1
             elif three_sum > target:
                 right -= 1
             else:
                 return three_sum
-            
+    
+    # Return the closest sum found
     return closest
 
 # Example 1
