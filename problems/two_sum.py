@@ -1,8 +1,8 @@
 """
 Problem 1: Two Sum (https://leetcode.com/problems/two-sum/)
 - Difficulty: Easy
-- Categories: Array, Hash Table
-- Technique: Two Pointers
+- Categories: Array
+- Technique: Two Pointers, Hash Table
 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such thatt hey add up to `target`.
 

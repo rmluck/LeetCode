@@ -2,7 +2,7 @@
 Problem 61: Rotate List (https://leetcode.com/problems/rotate-list/)
 - Difficulty: Medium
 - Categories: Linked List
-- Technique: Linked List Manipulation
+- Technique: In-Place Linked List Manipulation
 
 Given the `head` of a linked list, rotate the list to the right by `k` places.
 
