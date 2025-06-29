@@ -9,6 +9,7 @@
 | 18 | [4Sum](/problems/4sum.py) | Medium | Array, Sorting | Two Pointers | [https://leetcode.com/problems/4sum/](https://leetcode.com/problems/4sum/) | |
 | 41 | [First Missing Positive](/problems/first_missing_positive.py) | Hard | Array | Cyclic Sort | [https://leetcode.com/problems/first-missing-positive/](https://leetcode.com/problems/first-missing-positive/) | |
 | 61 | [Rotate List](/problems/rotate_list.py) | Medium | Linked List | In-Place Linked List Manipulation | [https://leetcode.com/problems/rotate-list/](https://leetcode.com/problems/rotate-list/) | |
+| 71 | [Simplify Path](/problems/simplify_path.py) | Medium | String | Stack | [https://leetcode.com/problems/simplify-path/](https://leetcode.com/problems/simplify-path) | |
 | 76 | [Minimum Window Substring](/problems/minimum_window_substring.py) | Hard | String | Sliding Window, Hash Table | [https://leetcode.com/problems/minimum-window-substring](https://leetcode.com/problems/minimum-window-substring) | |
 | 82 | [Remove Duplicates from Sorted List II](/problems/remove_duplicates_from_sorted_list_ii.py) | Medium | Linked List | Two Pointers | [https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/) | |
 | 83 | [Remove Duplicates from Sorted List](/problems/remove_duplicates_from_sorted_list.py) | Easy | Linked List | Two Pointers | [https://leetcode.com/problems/remove-duplicates-from-sorted-list/](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) | |
