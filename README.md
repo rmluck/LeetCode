@@ -37,4 +37,5 @@
 | 904 | [Fruit Into Baskets](/problems/fruit_into_baskets.py) | Medium | Array | Sliding Window | [https://leetcode.problems/fruit-into-baskets/](https://leetcode.problems/fruit-into-baskets/) | |
 | 977 | [Squares of a Sorted Array](/problems/squares_of_a_sorted_array.py) | Easy | Array, Sorting | Two Pointers | [https://leetcode.com/squares-of-a-sorted-array](https://leetcode.com/squares-of-a-sorted-array) | |
 | 1004 | [Max Consecutive Ones III](/problems/max_consecutive_ones_iii.py) | Medium | Array | Sliding Window | [https://leetcode.com/problems/max-consecutive-ones-iii](https://leetcode.com/problems/max-consecutive-ones-iii) | |
+| 1047 | [Remove All Adjacent Duplicates In String](/problems/remove_all_adjacent_duplicates_in_string.py) | Easy | String | Stack | [https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | |
 | 1089 | [Duplicate Zeros](/problems/duplicate_zeros.py) | Easy | Array | Two Pointers | [https://leetcode.com/problems/duplicate-zeros/](https://leetcode.com/problems/duplicate-zeros/) | |
