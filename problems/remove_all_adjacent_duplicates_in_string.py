@@ -17,14 +17,20 @@ Constraints:
 
 
 def remove_all_adjacent_duplicates_in_string(string: str) -> str:
+    # Initialize a stack to keep track of characters
     stack = []
 
+    # Iterate through each character in the string
     for char in string:
+        # If the stack is not empty and the top of the stack is the same as the current character
         if stack and stack[-1] == char:
+            # Pop the top character from the stack (remove the adjacent duplicate)
             stack.pop()
         else:
+            # If the stack is empty or the top character is different, push the current character onto the stack
             stack.append(char)
 
+    # Join the characters in the stack to form the final string
     return "".join(stack)
 
 # Example 1
