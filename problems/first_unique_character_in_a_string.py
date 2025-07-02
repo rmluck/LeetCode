@@ -13,21 +13,27 @@ Constraints:
 
 
 def first_unique_character_in_a_string(s: str) -> int:
+    # Count occurrences of each character and track their first appearances
     char_count = {}
     first_appearances = []
 
+    # Iterate through the string to populate the character count and first appearances
     for i in range(len(s)):
         char = s[i]
+        # Increment the count for the character or initialize it
         if char in char_count:
             char_count[char] += 1
         else:
             char_count[char] = 1
+            # Store the first appearance index of the character
             first_appearances.append((char, i))
     
+    # Iterate through the first appearances to find the first unique character and return its index
     for char, index in first_appearances:
         if char_count[char] == 1:
             return index
         
+    # If no unique character is found, return -1
     return -1
 
 # Example 1
