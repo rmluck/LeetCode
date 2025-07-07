@@ -1,10 +1,10 @@
 """
-Problem 102: Binary Tree Level Order Traversal (https://leetcode.com/problems/binary-tree-level-order-traversal/)
+Problem 107: Binary Tree Level Order Traversal II (https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)
 - Difficulty: Medium
 - Categories: Tree, Binary Tree
 - Technique: Breadth-First Search (BFS)
 
-Given the `root` of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
+Given the `root` of a binary tree, return the bottom-up level order traversal of its nodes' values. (i.e., from left to right, level by level from leaf to root).
 
 Constraints:
 - The number of nodes in the tree is in the range [0, 2000].
@@ -18,7 +18,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
-def binary_tree_level_order_traversal(root: TreeNode) -> list[list[int]]:
+def binary_tree_level_order_traversal_ii(root: TreeNode) -> list[list[int]]:
     # Initialize the order list and the queue for BFS
     order = []
     queue = [root] if root else []
@@ -37,10 +37,10 @@ def binary_tree_level_order_traversal(root: TreeNode) -> list[list[int]]:
                 queue.append(node.left)
             if node.right:
                 queue.append(node.right)
-        # Append the current level's values to the order list
-        order.append(level)
+        # Insert the current level's values at the beginning of the order list
+        order.insert(0, level)
 
-    # Return the complete level order traversal
+    # Return the complete bottom-up level order traversal
     return order
 
 # Helper function to create a binary tree from a list
@@ -90,30 +90,30 @@ def binary_tree_to_list(root: TreeNode) -> list[int]:
 
 # Example 1
 root1 = create_binary_tree_from_list([3, 9, 20, None, None, 15, 7])
-assert binary_tree_level_order_traversal(root1) == [[3], [9, 20], [15, 7]]
+assert binary_tree_level_order_traversal_ii(root1) == [[15, 7], [9, 20], [3]]
 
 # Example 2
 root2 = create_binary_tree_from_list([1])
-assert binary_tree_level_order_traversal(root2) == [[1]]
+assert binary_tree_level_order_traversal_ii(root2) == [[1]]
 
 # Example 3
 root3 = create_binary_tree_from_list([])
-assert binary_tree_level_order_traversal(root3) == []
+assert binary_tree_level_order_traversal_ii(root3) == []
 
 # Additional Test Cases
 root4 = create_binary_tree_from_list([1, 2, 3, 4, 5, None, None])
-assert binary_tree_level_order_traversal(root4) == [[1], [2, 3], [4, 5]]
+assert binary_tree_level_order_traversal_ii(root4) == [[4, 5], [2, 3], [1]]
 
 root5 = create_binary_tree_from_list([1, None, 2, None, 3])
-assert binary_tree_level_order_traversal(root5) == [[1], [2], [3]]
+assert binary_tree_level_order_traversal_ii(root5) == [[3], [2], [1]]
 
 root6 = create_binary_tree_from_list([1, 2, 3, 4, None, None, 5])
-assert binary_tree_level_order_traversal(root6) == [[1], [2, 3], [4, 5]]
+assert binary_tree_level_order_traversal_ii(root6) == [[5], [4], [2, 3], [1]]
 
 root7 = create_binary_tree_from_list([1, 2, None, 3, None, 4])
-assert binary_tree_level_order_traversal(root7) == [[1], [2], [3], [4]]
+assert binary_tree_level_order_traversal_ii(root7) == [[4], [3], [2], [1]]
 
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 # Runtime: 0 ms, faster than 100.00% of Python3 online submissions
-# Memory: 18.35 MB, less than 86.80% of Python3 online submissions
+# Memory: 18.11 MB, less than 38.13% of Python3 online submissions
