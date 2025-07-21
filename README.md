@@ -7,6 +7,7 @@
 | 15 | [3Sum](/problems/3sum.py) | Medium | Array, Sorting | Two Pointers | [https://leetcode.com/problems/3sum/](https://leetcode.com/problems/3sum/) | |
 | 16 | [3Sum Closest](/problems/3sum_closest.py) | Medium | Array, Sorting | Two Pointers | [https://leetcode.com/problems/3sum-closest/](https://leetcode.com/problems/3sum-closest/) | |
 | 18 | [4Sum](/problems/4sum.py) | Medium | Array, Sorting | Two Pointers | [https://leetcode.com/problems/4sum/](https://leetcode.com/problems/4sum/) | |
+| 34 | [Find First and Last Position of Element in Sorted Array](/problems/find_first_and_last_position_of_element_in_sorted_array.py) | Medium | Array | Binary Search | [https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array) | |
 | 41 | [First Missing Positive](/problems/first_missing_positive.py) | Hard | Array | Cyclic Sort | [https://leetcode.com/problems/first-missing-positive/](https://leetcode.com/problems/first-missing-positive/) | |
 | 61 | [Rotate List](/problems/rotate_list.py) | Medium | Linked List | In-Place Linked List Manipulation | [https://leetcode.com/problems/rotate-list/](https://leetcode.com/problems/rotate-list/) | |
 | 71 | [Simplify Path](/problems/simplify_path.py) | Medium | String | Stack | [https://leetcode.com/problems/simplify-path/](https://leetcode.com/problems/simplify-path/) | |
