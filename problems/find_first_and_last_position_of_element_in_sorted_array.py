@@ -59,3 +59,8 @@ assert find_first_and_last_position_of_element_in_sorted_array([1, 1, 1, 1], 1) 
 assert find_first_and_last_position_of_element_in_sorted_array([1, 2, 3, 4], 5) == [-1, -1]
 assert find_first_and_last_position_of_element_in_sorted_array([1, 2, 3, 4, 5], 1) == [0, 0]
 assert find_first_and_last_position_of_element_in_sorted_array([1, 2, 3, 4, 5], 5) == [4, 4]
+
+# Time Complexity: O(log n)
+# Space Complexity: O(1)
+# Runtime: 0 ms, faster than 100.00% of Python3 online submissions
+# Memory Usage: 19.20 MB, less than 20.60% of Python3 online submissions
